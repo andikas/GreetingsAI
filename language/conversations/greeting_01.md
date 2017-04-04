@@ -9,6 +9,12 @@ Hello
 < Hello world, I mean Human
 * greeting
 
+Are you OK?
+* greeting
+
+< I'm good. I'm a robot dude.
+* greeting
+
 Goodbye
 * goodbye
 
