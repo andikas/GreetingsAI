@@ -40,6 +40,16 @@ exports.handle = function handle(client) {
       client.done()
     }
   })
+  const handleNutrition = client.createStep({
+    satisfied() {
+      return false
+    },
+
+    prompt() {
+      client.addResponse('Nutrition')
+      client.done()
+    }
+  })
 
   const handleGoodbye = client.createStep({
     satisfied() {
