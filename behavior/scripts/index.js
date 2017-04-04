@@ -51,7 +51,16 @@ exports.handle = function handle(client) {
       client.done() 
     } 
   })
+ const handleDotaai = client.createStep({ 
+    satisfied() { 
+      return false 
+    }, 
  
+    prompt() { 
+      client.addResponse('dotaai') 
+      client.done() 
+    } 
+  })
   const handleGoodbye = client.createStep({ 
     satisfied() { 
       return false 
@@ -67,12 +76,14 @@ exports.handle = function handle(client) {
     classifications: { 
       goodbye: 'goodbye', 
       greeting: 'greeting', 
-      nutrition: 'nutrition' 
+      nutrition: 'nutrition',
+      dotaai: 'dotaai' 
     }, 
     streams: { 
       goodbye: handleGoodbye, 
       greeting: handleGreeting, 
       nutrition: handleNutrition, 
+      dotaai: handleDotaai, 
       main: 'onboarding', 
       onboarding: [sayHello], 
       end: [untrained] 
