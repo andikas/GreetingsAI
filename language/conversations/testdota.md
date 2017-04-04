@@ -8,3 +8,9 @@ dotabot
 
 < yes I am pudge
 * dotaai
+
+I'm not sure, try to hook me
+* dotaai
+
+< Ok, fresh meat lover coming
+* dotaai
