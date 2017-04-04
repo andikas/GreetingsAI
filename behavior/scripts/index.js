@@ -65,11 +65,13 @@ exports.handle = function handle(client) {
   client.runFlow({
     classifications: {
       goodbye: 'goodbye',
-      greeting: 'greeting'
+      greeting: 'greeting',
+      nutrition: 'nutrition'
     },
     streams: {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
+      nutrition: handleNutrition,
       main: 'onboarding',
       onboarding: [sayHello],
       end: [untrained]
