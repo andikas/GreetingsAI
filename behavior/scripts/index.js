@@ -46,7 +46,7 @@ exports.handle = function handle(client) {
     },
 
     prompt() {
-      client.addResponse('Nutrition')
+      client.addResponse('nutrition')
       client.done()
     }
   })
